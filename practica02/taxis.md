@@ -1,16 +1,16 @@
-#### Participants 
-###### Eric, Victor, Alex 
+# Participants 
+ Eric, Victor, Alex 
 
 -------------------------------------------------------------------------------
 -------------------------------------------------------------------------------
-## Introducció
-## Base de dades OO de taxistas. Disposem d'un objecte taxista amb propietats : 
+# Introducció
+ Base de dades OO de taxistas. Disposem d'un objecte taxista amb propietats : 
 * Placa
 * Nombre
 * Telefono
 * Mail
-## I la col·lecció 'Taxistas', on recopilarem tota la informacio dels taxistes.
-## Emmagatzem els taxistes en una taula de col·leccions (info_taxi).
+ I la col·lecció 'Taxistas', on recopilarem tota la informacio dels taxistes.
+ Emmagatzem els taxistes en una taula de col·leccions (info_taxi).
 ```sql
 
 -- Creación del objeto taxista  
@@ -52,3 +52,22 @@ INSERT INTO info_taxi VALUES(
 SELECT * FROM info_taxi t, TABLE(t.INFO_TAXISTA)
 ```
 ![Select taxista](https://preview.ibb.co/cygpcS/select_2.png)
+
+```sql
+
+-- Modifiquem la colecció taxistas amb el numero de cotxe 1010
+
+UPDATE info_taxi SET info_taxista = taxistas(
+					taxista(44, 'Dmytro', 555333222, '@dmytro')) 
+		 WHERE num_coche = 1010
+	
+SELECT T.NUM_COCHE, X.* FROM info_taxi t, TABLE(t.INFO_TAXISTA) X
+	
+NUM_COCHE |PLACA |NOMBRE |TELF      |MAIL    |
+----------|------|-------|----------|--------|
+3030      |30    |Pepet  |333333333 |@       |
+1010      |44    |Dmytro |555333222 |@dmytro |
+2020      |30    |Pepe   |333333333 |@       |
+2020      |40    |Eric   |444444444 |@       |
+
+```
