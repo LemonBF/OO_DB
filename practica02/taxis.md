@@ -1,16 +1,16 @@
-#### Participants 
-###### Eric, Victor, Alex 
+# Participants 
+ Eric, Victor, Alex 
 
 -------------------------------------------------------------------------------
 -------------------------------------------------------------------------------
-## Introducció
-## Base de dades OO de taxistas. Disposem d'un objecte taxista amb propietats : 
+# Introducció
+ Base de dades OO de taxistas. Disposem d'un objecte taxista amb propietats : 
 * Placa
 * Nombre
 * Telefono
 * Mail
-## I la col·lecció 'Taxistas', on recopilarem tota la informacio dels taxistes.
-## Emmagatzem els taxistes en una taula de col·leccions (info_taxi).
+ I la col·lecció 'Taxistas', on recopilarem tota la informacio dels taxistes.
+ Emmagatzem els taxistes en una taula de col·leccions (info_taxi).
 ```sql
 
 -- Creación del objeto taxista  
