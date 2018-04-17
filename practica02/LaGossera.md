@@ -47,3 +47,23 @@ ID_RACA |NOM_RACA |GOS_RACA          |ID_GOS |NOM      |COLOR |PES |
 0       |Husky    |['O.GOS','O.GOS'] |01     |Balto    |Blanc |12  |
 1       |PastorA  |['O.GOS','O.GOS'] |02     |Thor     |Marro |6   |
 1       |PastorA  |['O.GOS','O.GOS'] |03     |Firulais |Negre |8   |
+
+
+```sql
+--Fem un update.
+UPDATE gossera SET gos_raca =
+  races_gos(gos ('02', 'Odin', 'Marro', '8'),
+            gos('03', 'Mike', 'Marro', '9'))
+WHERE id_raca = 1
+
+--Fem un altre cop la select.
+SELECT * FROM GOSSERA g, TABLE(g.gos_raca) 
+
+```
+#### Resultat select:
+ID_RACA |NOM_RACA |GOS_RACA          |ID_GOS |NOM   |COLOR |PES |
+--------|---------|------------------|-------|------|------|----|
+0       |Husky    |['O.GOS','O.GOS'] |00     |Rex   |Gris  |10  |
+0       |Husky    |['O.GOS','O.GOS'] |01     |Balto |Blanc |12  |
+1       |PastorA  |['O.GOS','O.GOS'] |02     |Odin  |Marro |8   |
+1       |PastorA  |['O.GOS','O.GOS'] |03     |Mike  |Marro |9   |
