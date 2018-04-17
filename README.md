@@ -19,3 +19,22 @@ Entrega a la carpeta [pràctica 2](./practica02).
 ## Pràctica 3:
 
 Modifica la pràctica anterior per tal de fer [DML](https://docs.oracle.com/database/121/ADOBJ/adobjcol.htm#CIHJHIGG) sobre les col·leccions que heu creat. Entregueu la pràctica a la carpeta [pràctica 3](./practica03).
+
+## Pràctica 4:
+
+Mira la pràctica [Oracle Objecte-Relacional - Els soldats - Treballar amb col·leccions](https://uf.ctrl-alt-d.net/material/mostra/153/oracle-objecte-relacional-els-soldats-treballar-amb-colleccions)
+
+Cal fer un objecte que contingui una col·lecció amb un mètode que retorni un dels objectes de la col·lecció. Després tindrem una taula d'aquests objectes.
+
+Propostes:
+
+A l'Exemple |  Taxistes |  Alumnes  |  Gossos
+-----|----|----|---
+soldat_tip  | Taxista | Alumne | Gos
+divisio_tip | Taxistes | Alumnes | Gossos
+exercit_tip (getCapità)| Flota (getLliure)| Classe (getDelegat) | Gossera (getElMesGros)
+exercits    |   Flotes | Institut | Gosseres
+
+Entrega a la carpeta [pràctica 4](./practica04).
+
+
