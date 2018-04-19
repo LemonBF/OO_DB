@@ -37,4 +37,10 @@ exercits    |   Flotes | Institut | Gosseres
 
 Entrega a la carpeta [pràctica 4](./practica04).
 
+## Pràctica 5:
+
+El mètode de la pràctica anterior, el que hem fet amb un `FOR i IN 1..` el podiem haver fet amb un `TABLE`. Es demana:
+* Crea un segon mètode ( sense esborrar el mètode que ja tens programat ) que retorni el mateix objecte que el mètode que ja tens però ara l'ha de recuperar de la col·lecció mitjançant `TABLE`.
+* Invoca els dos mètodes, el de la pràctica anterior i el nou. Posa el resultat dins variables.
+* Amb un `IF` comprova si l'objecte que ens retornan els dos mètodes és el mateix. Per fer-ho, recorda modificar l'estructura de l'objecte retornat de manera que tingui un mètode `MAP`. Recorda que aquest tipus de mètode serveix per quan comparem un objecte amb un altre saber si són o no el mateix.
 
